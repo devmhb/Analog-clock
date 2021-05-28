@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: coral;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --black: #000;
+}
+
+.clock {
+  background-color: #fff;
+  min-height: 35rem;
+  min-width: 35rem;
+  position: relative;
+  border-radius: 50%;
+  border: 15px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock .div::before {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  height: 15px;
+  width: 8px;
+  background-color: black;
+}
+.clock::after {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #000;
+}
+.hand {
+  position: absolute;
+  background-color: #000;
+  border-radius: 10px;
+  transform-origin: bottom;
+}
+
+.clock .hour {
+  width: 3%;
+  height: 25%;
+  top: 25%;
+  left: 48.5%;
+}
+.clock .min {
+  width: 2%;
+  height: 32%;
+  top: 17.5%;
+  left: 49.5%;
+}
+.clock .sec {
+  width: 1%;
+  height: 42%;
+  top: 8%;
+  left: 49.5%;
+}
+
+.clock .div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.div1 {
+  transform: rotate(30deg);
+}
+.div2 {
+  transform: rotate(60deg);
+}
+.div3 {
+  transform: rotate(90deg);
+}
+.div4 {
+  transform: rotate(120deg);
+}
+.div5 {
+  transform: rotate(150deg);
+}
+.div6 {
+  transform: rotate(180deg);
+}
+.div7 {
+  transform: rotate(210deg);
+}
+.div8 {
+  transform: rotate(240deg);
+}
+.div9 {
+  transform: rotate(270deg);
+}
+.div10 {
+  transform: rotate(300deg);
+}
+.div11 {
+  transform: rotate(330deg);
+}
+.div12 {
+  transform: rotate(360deg);
+}
+.div:nth-child(3n)::before {
+  height: 25px;
+}
